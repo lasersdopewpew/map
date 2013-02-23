@@ -1,0 +1,66 @@
+.dashed > a{
+	color: #487B95;
+	text-decoration: none;
+	border-bottom: 1px solid;
+	border-color: #487B95;
+	border-bottom-style: dashed;
+	margin: 0 1em;  
+}
+.dashed > a:hover{
+  background-color: #f8eeb4; 
+}
+
+#text {
+  width: 150px;
+  float: left;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: 30px;
+  margin-top: 100px;
+}
+
+#imapc {
+  display: block;
+  width: 70%;
+  float: right;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1em;
+  border: 0;
+}
+
+#imap{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#controls{
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  margin-top: 30px;
+  padding: 15pt 15px;
+  width: 400px;
+  -o-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+}
+
+.hidden{
+  display: none;
+}
+
+#layer5 > path:hover, #layer5 > rect:hover, .higlight{
+  fill: #f8eeb4!important;
+  fill-opacity:1;
+
+}
+
+#layer5 > path, #layer5 > rect{
+    fill-opacity:0;
+}
