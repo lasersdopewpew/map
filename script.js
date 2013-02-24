@@ -45,4 +45,17 @@ function show_way(){
   }
 }
 
-
+$(function(){
+    $('path, rect').hover(function(){
+          var p = jQuery(this);
+          var position = p.position();
+          var tooltip = document.getElementById("tooltipspan");
+          tooltip.innerHTML = jQuery(this).attr("descr");
+          tooltip.style.top = position.top+10+"px";
+          tooltip.style.left = position.left+ $("this").width() +"px";
+          tooltip.style.display = "block";
+    },
+    function(){
+      document.getElementById("tooltipspan").style.display = "none";
+    });
+});

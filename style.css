@@ -57,10 +57,39 @@
 
 #layer5 > path:hover, #layer5 > rect:hover, .higlight{
   fill: #f8eeb4!important;
-  fill-opacity:1;
-
+  fill-opacity:0.5;
 }
 
 #layer5 > path, #layer5 > rect{
     fill-opacity:0;
+}
+
+#tooltipspan {
+      position: absolute;
+      width: 150px;
+      min-height: 20px;
+      line-height: 20px;
+      padding: 10px;
+      font-size: 14px;
+      text-align: center;
+      font-family: "PT Sans";
+      color: rgb(0, 0, 0);
+      background: rgb(255, 255, 255);
+      border: 4px solid rgb(255, 255, 255);
+      border-radius: 5px;
+      text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px;
+      box-shadow: rgba(0, 0, 0, 0.1) 10px 10px 13px 0px;
+      display: none;
+}
+
+#tooltipspan:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-width: 10px;
+      border-style: solid;
+      border-color: #FFFFFF transparent transparent transparent;
+      bottom: -20px;
+      left: 75px;
 }
