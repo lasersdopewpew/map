@@ -45,6 +45,7 @@ function show_way(){
   }
 }
 
+/*
 $(function(){
     $('path, rect').hover(function(){
           var p = jQuery(this);
@@ -59,3 +60,29 @@ $(function(){
       document.getElementById("tooltipspan").style.display = "none";
     });
 });
+*/
+
+$("path, rect").on({
+  click: function(){
+  },
+  mouseenter: function(){
+              var p = jQuery(this);
+          var position = p.position();
+          var tooltip = document.getElementById("tooltipspan");
+          tooltip.innerHTML = jQuery(this).attr("descr");
+        // $("selector").css('top', '50px');
+          tooltip.style.top = position.top+10+"px";
+          tooltip.style.left = position.left+ $("this").width() +"px";
+          tooltip.style.display = "block";
+  },
+  mouseleave: function(){
+    document.getElementById("tooltipspan").style.display = "none";
+  }});
+
+$("#tooltipspan").hover(
+  function () {
+    tooltip.style.display = "block";
+  },
+  function () {
+  }
+);
