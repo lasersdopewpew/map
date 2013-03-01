@@ -11,7 +11,7 @@
 }
 
 #text {
-  width: 150px;
+  width: 200px;
   float: left;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -44,7 +44,7 @@
   background-color: white;
   margin-top: 30px;
   padding: 15pt 15px;
-  width: 400px;
+  width: 600px;
   -o-border-radius: 30px;
   -moz-border-radius: 30px;
   -webkit-border-radius: 30px;
@@ -57,11 +57,11 @@
 
 #layer5 > path:hover, #layer5 > rect:hover, .higlight{
   fill: #f8eeb4!important;
-  fill-opacity:0.5;
+  fill-opacity:0.5!important;
 }
 
 #layer5 > path, #layer5 > rect{
-    fill-opacity:0;
+    fill-opacity:0!important;
 }
 
 #tooltipspan {

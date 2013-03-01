@@ -45,6 +45,44 @@ function show_way(){
   }
 }
 
+$('#hide_button').on({
+    mouseenter: function() {
+        $("#layer6", svgdom).attr("class", "oldclass");
+    },
+    mouseleave: function() {
+      if (!way_visible)
+        $("#layer6", svgdom).attr("class", "oldclass hidden");
+    }
+});
+
+function draw_shit(){
+  // draw borders
+  var xmlns = "http://www.w3.org/2000/svg";
+
+  var coords = "M 0, 0";
+  coords += " M 270, 970";
+  coords += " l 10, -123";
+  coords += " l -20, -300";
+  coords += " l 85, -100";
+  coords += " l 125, 20";
+
+
+  var g = document.createElementNS (xmlns, "g");
+
+  var path = document.createElementNS (xmlns, "path");
+  path.setAttributeNS (null, 'stroke', "#000000");
+  path.setAttributeNS (null, 'stroke-width', 10);
+  path.setAttributeNS (null, 'stroke-linejoin', "round");
+  path.setAttributeNS (null, 'd', coords);
+  path.setAttributeNS (null, 'fill', "none");
+  path.setAttributeNS (null, 'opacity', 1.0);
+  g.appendChild (path);
+  
+  var svgContainer = document.getElementById ("imap");
+  svgContainer.appendChild (g);  
+
+}
+
 /*
 $(function(){
     $('path, rect').hover(function(){
